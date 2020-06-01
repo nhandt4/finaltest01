@@ -1,5 +1,6 @@
 finaltest01\actions\ChooseDate$ChooseDateBuilder.class
 finaltest01\actions\VisitorBooking$VisitorBookingBuilder.class
+finaltest01\tasks\VerifyResult.class
 finaltest01\actions\ChooseDate.class
 finaltest01\tasks\SearchDestination.class
 finaltest01\ui\BookingPage.class

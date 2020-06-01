@@ -12,6 +12,7 @@ public class Booking {
     public static Target CHILDREN = Target.the("quantity of children").locatedBy("//button[@aria-label=\"Increase number of Children\"]");
     public static Target ROOM = Target.the("quantity of room").locatedBy("//button[@aria-label=\"Increase number of Rooms\"]");
     public static Target RESULT = Target.the("result").locatedBy("//div[@class='sr_header ']/h1");
-    public static Target RESULT_LIST = Target.the("Result List").locatedBy("//div[contains(@class,\"sr_item_new sr_item_default sr_property_block\")]");
+    public static Target RESULT_LIST = Target.the("Item List").locatedBy("//a[@class='bui-link']");
+//    public static Target RESULT_LIST = Target.the("Result List").locatedBy("//div[contains(@class,\"sr_item_new sr_item_default sr_property_block\")]");
 }
 

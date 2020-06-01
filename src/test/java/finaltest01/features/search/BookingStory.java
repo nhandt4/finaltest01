@@ -4,6 +4,7 @@ import finaltest01.actions.ChooseDate;
 import finaltest01.actions.VisitorBooking;
 import finaltest01.questions.SearchResultListQuestion;
 import finaltest01.tasks.SearchDestination;
+import finaltest01.tasks.VerifyResult;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
@@ -51,11 +52,12 @@ public class BookingStory {
         when(anna).attemptsTo(
                 SearchDestination.withKeyword("Phú Quốc"),
                 ChooseDate.from(now.plusDays(7)).to(now.plusDays(10)),
-                VisitorBooking.adults(4).child(3).room(2)
+                VisitorBooking.adults(4).child(3).room(2),
+                VerifyResult.getItemList("Phú Quốc")
 
         );
 
-        anna.should(seeThat("see", SearchResultListQuestion.TextofSearchResults("Phú Quốc"),  containsString("Phú Quốc")));
+//        anna.should(seeThat(SearchResultListQuestion.getResultList(), contains("Phú Quốc")));
 
     }
 
