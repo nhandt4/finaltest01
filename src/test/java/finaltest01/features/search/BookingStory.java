@@ -56,7 +56,7 @@ public class BookingStory {
 //                VerifyResult.getItemList("Phú Quốc")
 
         );
-        then(anna).should(seeThat("The number of matched rooms ", SearchResultListQuestion.getResultList(), containsString("274")));
+        then(anna).should(seeThat("The number of matched rooms ", SearchResultListQuestion.getResultList(), equalTo("274")));
 
     }
 
