@@ -20,21 +20,18 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class VerifyResult implements Interaction {
     private final String keyword;
-    private static String result;
-    public VerifyResult(String keyword, String result){
+    public VerifyResult(String keyword){
         this.keyword = keyword;
-        this.result = result;
     }
 
     @Override
-    @Step("{0} see #result matched with destination is #keyword in the list of result")
+    @Step("{0} see results matched with destination is #keyword in the list of result")
     public <T extends Actor> void performAs(T t) {
-        result = Text.of(Booking.RESULT).viewedBy(t).asString();
-        System.out.println(result);
 
-//        t.attemptsTo(
-//                Ensure.thatTheSetOf(Booking.RESULT_LIST).allMatch(TheMatchingElement.containsText(keyword))
-//        );
+
+        t.attemptsTo(
+                Ensure.thatTheSetOf(Booking.RESULT_LIST).allMatch(TheMatchingElement.containsText(keyword))
+        );
 
 
     }

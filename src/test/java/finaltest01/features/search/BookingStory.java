@@ -52,11 +52,11 @@ public class BookingStory {
         when(anna).attemptsTo(
                 SearchDestination.withKeyword("Phú Quốc"),
                 ChooseDate.from(now.plusDays(7)).to(now.plusDays(10)),
-                VisitorBooking.adults(4).child(3).room(2)
-//                VerifyResult.getItemList("Phú Quốc")
+                VisitorBooking.adults(4).child(3).room(2),
+                VerifyResult.getItemList("Phú Quốc")
 
         );
-        then(anna).should(seeThat("The number of matched rooms ", SearchResultListQuestion.getResultList(), equalTo("274")));
+        then(anna).should(seeThat("The number of matched rooms ", SearchResultListQuestion.getResultList(), equalTo("271")));
 
     }
 
