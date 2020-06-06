@@ -11,9 +11,9 @@ pipeline{
         }
         stage ('Test Stage') {
 
-                steps {
-                        bat 'mvn clean verify'
-                }
+            steps {
+                    bat 'mvn clean verify'
+            }
             }
         stage ('Serenity Report'){
             steps{
