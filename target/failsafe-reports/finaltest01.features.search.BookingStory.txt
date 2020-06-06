@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: finaltest01.features.search.BookingStory
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.748 s - in finaltest01.features.search.BookingStory
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 158.775 s <<< FAILURE! - in finaltest01.features.search.BookingStory
+search_booking(finaltest01.features.search.BookingStory)  Time elapsed: 154.618 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: an element that is visible
+     but: no matching element found by xpath: //td[@data-date='2020-06-13']
+	at finaltest01.features.search.BookingStory.search_booking(BookingStory.java:52)
+
