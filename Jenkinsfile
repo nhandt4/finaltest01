@@ -15,5 +15,17 @@ pipeline{
                         bat 'mvn clean verify'
                 }
             }
+        stage ('Serenity Report'){
+            steps{
+                publishHTML(target: [
+                        reportName : 'Serenity',
+                        reportDir:   'target/site/serenity',
+                        reportFiles: 'index.html',
+                        keepAll:     true,
+                        alwaysLinkToLastBuild: true,
+                        allowMissing: false
+                    ])
+            }
+        }
     }
 }
