@@ -6,13 +6,13 @@ pipeline{
 
         stage ('Compile Stage') {
             steps {
-               sh 'mvn clean install'
+               bat 'mvn clean install'
             }
         }
         stage ('Test Stage') {
 
                 steps {
-                        sh 'mvn clean verify'
+                        bat 'mvn clean verify'
                 }
             }
     }
