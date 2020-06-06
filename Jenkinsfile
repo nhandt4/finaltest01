@@ -28,17 +28,7 @@ pipeline{
         }
 
 
-    stage ('Serenity Reports') {
 
-        steps {
-            cucumber buildStatus: "UNSTABLE",
-                fileIncludePattern: "**/cucumber.json",
-                jsonReportDirectory: 'target/site/serenity'
 
-        }
-
-    }
-
-    }
 
 }
