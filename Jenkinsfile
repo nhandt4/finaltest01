@@ -5,24 +5,15 @@ pipeline{
     stages {
 
         stage ('Compile Stage') {
-
             steps {
-
                sh 'mvn clean install'
-
-
             }
         }
-    stage ('Test Stage') {
+        stage ('Test Stage') {
 
-            steps {
-
-
-                    sh 'mvn clean verify'
-
-
-
+                steps {
+                        sh 'mvn clean verify'
+                }
             }
-        }
     }
 }
